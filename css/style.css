@@ -1,0 +1,57 @@
+@import 'fonts.css';
+
+:root {
+  --primary-font: "RedHatMono-Reg", monospace;
+  --secondary-font: serif;
+  --text-color: #000;
+  --text-color-secondary: #FFF;
+  --text-color-hover: #62ff29;
+  --accent-color: #DCFF66;
+  --accent-color-secondary: #;
+  --background-color: #FFF;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-size: calc(0.3em + .5vw);
+  letter-spacing: -0.01em;
+}
+
+html, body {
+  margin: 0;
+  padding: 0
+    /* cursor: url(/images/cursor_black.png), default; */
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  padding: calc(1em + 0.5vw);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav pre:first-child {
+  flex-grow: 0.5;
+}
+
+pre {
+  font-family: var(--primary-font);
+  margin: 0;
+}
+
+header a pre:hover {
+  background-color: var(--text-color-hover);
+  border-radius: 10em;
+}
