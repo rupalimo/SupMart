@@ -36,15 +36,9 @@ body {
   height: 100vh;
 }
 
-header {
-  padding: calc(1em + 0.5vw);
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+pre {
+  font-family: var(--primary-font);
+  margin: 0;
 }
 
 a {
@@ -52,16 +46,60 @@ a {
   color: var(--text-color);
 }
 
-nav pre:first-child {
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+/* TOP TITLE + NAV BAR */
+header {
+  padding: calc(1em + 0.5vw);
+}
+
+header nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a:first-child {
   flex-grow: 0.5;
 }
 
-pre {
-  font-family: var(--primary-font);
-  margin: 0;
+#supmart:hover {
+  background-color: var(--text-color-secondary);
 }
 
-header a pre:hover {
+header a pre:hover, .activemain {
   background-color: var(--text-color-hover);
   border-radius: 10em;
+}
+
+.activemain, .activelink {
+  cursor: default;
+}
+
+/* PRODUCT INDEX */
+main nav {
+  align-items: center;
+  margin: 2em 1em;
+}
+
+main nav a {
+  padding: 0.625em;
+}
+
+main nav a:hover, footer a:hover {
+  text-decoration: underline;
+}
+
+.activelink {
+  text-decoration: underline;
+  color: var(--text-color-hover);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
